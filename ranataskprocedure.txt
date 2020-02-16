@@ -1,0 +1,24 @@
+in this task I have created six files and two scripts
+in the first script (script.sh) i wrote commands and store the results in files for
+each (disk,cpu and memory)
+so initially i wrote command to show some info about disk(usage and available )
+for the used file system with showing the date and time
+so i used the df command then i use the awk with NR to filter the result of df
+
+
+then i wrote a command to show the used and free memory by using free -m
+command then i use awk command to filter the result of free -m to show only free and 
+used memory and i show the date and time
+
+then i used the mpstat -P ALL command to show some info about cpu 
+such as used and idle and i used the awk command to filter the cpu's results 
+
+
+
+
+in the second script (scriptavg.sh)
+in this script i wrote commands to calculate the averages of info in each of 
+cpu ,disk ,mem files 
+awk '{totalm +=$1;countm++ }END {print totalm/countm}' to calculate the avearges of each of them
+
+i used the crontab to excute the jobs
